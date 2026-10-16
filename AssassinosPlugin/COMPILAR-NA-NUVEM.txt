@@ -1,0 +1,21 @@
+COMO GERAR O JAR SEM INSTALAR PROGRAMAS NO PC
+
+Este ZIP contém um workflow de GitHub Actions para compilar o projeto na nuvem.
+Você precisará de uma conta GitHub gratuita. Não coloque senhas, tokens nem arquivos do servidor no repositório.
+
+1. Entre em https://github.com e crie uma conta ou faça login.
+2. Crie um repositório novo, por exemplo: AssassinosPlugin.
+   Para facilitar, pode deixá-lo PRIVATE.
+3. Na página do repositório, use Add file > Upload files.
+4. Extraia este ZIP no PC e envie os ARQUIVOS E PASTAS DE DENTRO de AssassinosPlugin para a raiz do repositório. Confira que build.gradle, settings.gradle, src/ e .github/ ficaram na raiz.
+   Se o GitHub não mostrar a pasta .github, ative arquivos ocultos no explorador ou envie os arquivos pelo editor web.
+5. Clique em Commit changes.
+6. Abra a aba Actions. Se for solicitado, habilite GitHub Actions para o repositório.
+7. Escolha “Build Assassinos plugin” na lateral e clique em Run workflow.
+8. Quando o workflow terminar com um visto verde, abra a execução e procure Artifacts.
+9. Baixe o artifact “Assassinos-1.0.0”. Dentro dele estará Assassinos-1.0.0.jar.
+10. Envie o JAR para a pasta plugins do servidor Paper 1.19.4 e reinicie o servidor.
+
+Se a compilação falhar, abra a execução em Actions e copie a parte vermelha do log para o ChatGPT. Não instale o JAR no servidor até a compilação concluir com sucesso.
+
+AVISO: compilar não significa que todas as mecânicas já foram testadas em um servidor real. Faça testes com jogadores antes de abrir o minigame ao público.

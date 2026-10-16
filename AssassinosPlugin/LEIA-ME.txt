@@ -1,0 +1,27 @@
+ASSASSINOS — plugin para Paper 1.19.4
+
+O QUE ESTA VERSÃO TEM
+- Fila /playassassinos (mínimo 3, máximo 8 jogadores).
+- Contagem regressiva de 15 segundos.
+- Sorteio de mapa entre os pontos configurados.
+- Cargos secretos: Assassino, Xerife, Inocente, Barulhento, Cúmplice (6+ jogadores) e Fugitivo (7+ jogadores).
+- Assassino com espada; Xerife com arco e 3 flechas; Barulhento com berrante; Fugitivo bloqueia o primeiro golpe e recebe velocidade.
+- Eliminação, espectador e fim da partida.
+- Retorno ao lobby configurado.
+
+CONFIGURAÇÃO DENTRO DO SERVIDOR
+1. Entre no local onde os jogadores devem voltar após a partida e use: /assassinos setlobby
+2. Vá para o ponto onde os jogadores devem nascer no mapa de jogo e use: /assassinos setmap cidade
+3. Para adicionar outros mapas, vá ao ponto inicial de cada um e use, por exemplo: /assassinos setmap velhooeste
+4. Os mapas são sorteados entre os pontos salvos. O comando salva o mundo e as coordenadas; o mundo precisa existir no servidor.
+5. Use /playassassinos para entrar na fila. Use o mesmo comando novamente para sair.
+6. /assassinos status mostra o estado. /assassinos start inicia manualmente (mínimo 3 jogadores). /assassinos stop encerra a partida.
+
+COMPILAR
+É um projeto Gradle para Java 17 e Paper API 1.19.4. Abra a pasta no IntelliJ IDEA com suporte a Gradle e compile a tarefa `jar`, ou execute `gradle build` com Gradle 8+ instalado. O JAR será criado em build/libs/Assassinos-1.0.0.jar. Coloque esse JAR em plugins/ e reinicie o servidor.
+
+LIMITAÇÕES DA PRIMEIRA VERSÃO
+- Esta é uma base jogável inicial, não uma versão final balanceada.
+- O arco do Xerife e as regras de vitória precisam ser testados no servidor real; em particular, a detecção de flechas disparadas a distância ainda não diferencia perfeitamente a origem do dano nesta versão.
+- Não há ainda seleção de mapa por votação, scoreboard personalizada, proteção de construção, nem comando para criar arenas com limites.
+- Teste primeiro num servidor de desenvolvimento, faça backup e não substitua plugins existentes.

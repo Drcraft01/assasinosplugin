@@ -1,0 +1,16 @@
+name: Assassinos
+version: 1.0.0
+main: br.com.assassinos.AssassinosPlugin
+api-version: '1.19'
+author: ChatGPT
+commands:
+  playassassinos:
+    description: Entra ou sai da fila do minigame Assassinos
+    usage: /playassassinos
+  assassinos:
+    description: Configura e administra o minigame Assassinos
+    usage: /assassinos <setlobby|setmap|start|stop|status>
+permissions:
+  assassinos.admin:
+    description: Permite configurar o minigame Assassinos
+    default: op

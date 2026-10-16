@@ -1,0 +1,7 @@
+# Configuração inicial do minigame Assassinos.
+# Configure o lobby e os pontos dos mapas dentro do jogo:
+# /assassinos setlobby
+# /assassinos setmap cidade
+
+lobby: {}
+maps: {}
